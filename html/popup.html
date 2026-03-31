@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <title>Monkeytype Translator</title>
+  <link rel="stylesheet" href="../css/popup.css">
+</head>
+<body>
+  <!-- HLAVNÍ STRÁNKA (MAIN) -->
+  <div id="page-main" class="page active">
+    <div class="header">
+      <div class="logo-area">
+        <img src="../icons/logo.png" alt="Logo" class="logo">
+        <div class="title-text">
+          <h1 data-i18n="popup.title">Monkeytype Translator</h1>
+        </div>
+      </div>
+      <button id="open-mt-btn" class="btn-shortcut btn-icon-only" title="Open Monkeytype">
+        <span class="icon-mask" style="--icon:url('../icons/link.svg')"></span>
+      </button>
+    </div>
+
+    <div class="content">
+      <div class="section">
+        <label data-i18n="popup.target">Cílový jazyk:</label>
+        <select id="target-lang"></select>
+      </div>
+
+      <div class="section">
+        <label data-i18n="popup.mode">Režim zobrazení:</label>
+        <select id="mode">
+          <option value="panel" data-i18n="popup.mode.panel">Plovoucí panel</option>
+          <option value="inline" data-i18n="popup.mode.inline">Nad slovy</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <div class="btn-row">
+          <button id="btn-more" class="btn-secondary" data-i18n="popup.more">Další nastavení</button>
+          <button id="open-dict-btn" class="btn-secondary btn-icon-only" title="Full Dictionary">
+            <span class="icon-mask" style="--icon:url('../icons/dictionary.svg')"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRÁNKA DALŠÍHO NASTAVENÍ (MORE) -->
+  <div id="page-more" class="page">
+    <div class="header">
+      <button id="btn-back" class="btn-back" aria-label="Back">
+        <span class="icon-mask" style="--icon:url('../icons/arrow_left.svg')"></span>
+      </button>
+      <h1 data-i18n="popup.more">Další nastavení</h1>
+    </div>
+<!-- NASTAVENÍ JAZYKU APLIKACE -->
+    <div class="content">
+      <div class="section">
+        <label data-i18n="popup.appLang">Jazyk aplikace:</label>
+        <select id="app-lang">
+          <option value="cs">Čeština</option>
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="pl">Polski</option>
+          <option value="ru">Русский</option>
+          <option value="zh">中文</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label data-i18n="popup.theme">Vzhled (Téma):</label>
+        <select id="theme">
+          <option value="monkeytype" data-i18n="popup.theme.monkey">Monkeytype (Auto)</option>
+          <option value="dark" data-i18n="popup.theme.dark">Tmavý</option>
+          <option value="light" data-i18n="popup.theme.light">Světlý</option>
+          <option value="dark-blue" data-i18n="popup.theme.darkblue">Tmavě modrý</option>
+          <option value="black" data-i18n="popup.theme.black">Černý (OLED)</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label data-i18n="popup.notify">Oznámení při uložení:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" id="notify-visual"> <span data-i18n="popup.notify.visual">Vizuální</span></label>
+          <label><input type="checkbox" id="notify-sound"> <span data-i18n="popup.notify.sound">Zvukové</span></label>
+        </div>
+      </div>
+
+      <div class="section">
+        <label data-i18n="popup.shortcuts.title">Klávesové zkratky:</label>
+        <div class="shortcut-row">
+          <span data-i18n="popup.shortcuts.dict">Slovník</span>
+          <input type="text" id="shortcut-dict" class="shortcut-input">
+        </div>
+        <div class="shortcut-row">
+          <span data-i18n="popup.shortcuts.save">Uložit</span>
+          <input type="text" id="shortcut-save" class="shortcut-input">
+        </div>
+        <div class="shortcut-row">
+          <span data-i18n="popup.shortcuts.tts">Výslovnost</span>
+          <input type="text" id="shortcut-tts" class="shortcut-input">
+        </div>
+        <button id="reset-shortcuts" class="btn-secondary btn-reset" data-i18n="popup.shortcuts.reset">Reset klávesových zkratek</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/common/storage.js"></script>
+  <script src="../js/common/i18n.js"></script>
+  <script src="../js/popup/target-languages.js"></script>
+  <script src="../js/popup/popup-theme.js"></script>
+  <script src="../js/popup/popup-ui.js"></script>
+</body>
+</html>

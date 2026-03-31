@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <title>Monkeytype Translator</title>
+  <link rel="icon" href="../icons/logo.png">
+  <link rel="stylesheet" href="../css/dictionary.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-area">
+        <img src="../icons/logo.png" alt="Logo" class="logo">
+        <h1 data-i18n="ext.dict.title">Můj slovník překladů</h1>
+      </div>
+      <div class="stats" id="stats-text">...</div>
+    </div>
+
+    <div class="controls">
+      <!-- FILTROVÁNÍ -->
+      <div class="filter-group">
+        <label data-i18n="ext.dict.filter.label">Zobrazit:</label>
+        <select id="filter-type">
+          <option value="all" data-i18n="ext.dict.filter.all">Všechna slova</option>
+          <option value="saved" data-i18n="ext.dict.filter.saved">Pouze oblíbená</option>
+        </select>
+      </div>
+
+      <!-- SEŘAZENÍ -->
+      <div class="sort-group">
+        <label data-i18n="ext.dict.sort.label">Seřadit podle:</label>
+        <select id="sort-type">
+          <option value="newest" data-i18n="ext.dict.sort.newest">Nejnovější</option>
+          <option value="oldest" data-i18n="ext.dict.sort.oldest">Nejstarší</option>
+          <option value="most_frequent" data-i18n="ext.dict.sort.frequent">Nejčastější</option>
+          <option value="alphabetical" data-i18n="ext.dict.sort.alpha">Abecedně (A-Z)</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button id="clear-dict-btn" class="btn-danger">
+          <span class="icon-mask icon-danger" style="--icon:url('../icons/delete.svg')"></span>
+          <span data-i18n="ext.dict.clear">Smazat slovník</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table id="dict-table">
+        <thead>
+          <tr>
+            <th width="80"><span class="icon-mask icon-accent" style="--icon:url('../icons/saved.svg')"></span></th>
+            <th data-i18n="ext.dict.table.word">Slovo</th>
+            <th data-i18n="ext.dict.table.trans">Překlad</th>
+            <th width="100" data-i18n="ext.dict.table.count">Počet</th>
+            <th width="100"><span class="icon-mask icon-danger" style="--icon:url('../icons/delete.svg')"></span></th>
+          </tr>
+        </thead>
+        <tbody id="dict-body">
+          <!-- TADY SE BUDOU GENEROVAT ŘÁDKY -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LAZY LOADING -->
+    <div class="load-more-area">
+      <button id="load-more-btn" class="btn-load" data-i18n="ext.dict.loadMore">Načíst další slova...</button>
+    </div>
+  </div>
+
+  <script src="../js/common/storage.js"></script>
+  <script src="../js/common/i18n.js"></script>
+  <script src="../js/dictionary/dict-ui.js"></script>
+  <script src="../js/dictionary/dict-utils.js"></script>
+  <script src="../js/dictionary/dict-logic.js"></script>
+</body>
+</html>

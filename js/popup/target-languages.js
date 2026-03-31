@@ -1,0 +1,52 @@
+/**
+ * MODUL: CÍLOVÉ JAZYKY (POPUP)
+ * Účel: Seznam jazyků pro výběr cílového překladu.
+ */
+
+const TARGET_LANGUAGES = [
+  { code: 'cs', name: 'Čeština' },
+  { code: 'en', name: 'English' },
+  { code: 'de', name: 'Deutsch' },
+  { code: 'sk', name: 'Slovenština' },
+  { code: 'pl', name: 'Polski' },
+  { code: 'fr', name: 'Français' },
+  { code: 'es', name: 'Español' },
+  { code: 'it', name: 'Italiano' },
+  { code: 'pt', name: 'Português' },
+  { code: 'ru', name: 'Русский' },
+  { code: 'uk', name: 'Українська' },
+  { code: 'tr', name: 'Türkçe' },
+  { code: 'nl', name: 'Nederlands' },
+  { code: 'sv', name: 'Svenska' },
+  { code: 'no', name: 'Norsk' },
+  { code: 'da', name: 'Dansk' },
+  { code: 'fi', name: 'Suomi' },
+  { code: 'is', name: 'Íslenska' },
+  { code: 'el', name: 'Ελληνικά' },
+  { code: 'hu', name: 'Magyar' },
+  { code: 'ro', name: 'Română' },
+  { code: 'bg', name: 'Български' },
+  { code: 'sr', name: 'Srpski' },
+  { code: 'hr', name: 'Hrvatski' },
+  { code: 'sl', name: 'Slovenščina' },
+  { code: 'lt', name: 'Lietuvių' },
+  { code: 'lv', name: 'Latviešu' },
+  { code: 'et', name: 'Eesti' },
+  { code: 'zh-CN', name: '中文 (简体)' },
+  { code: 'zh-TW', name: '中文 (繁體)' },
+  { code: 'ja', name: '日本語' },
+  { code: 'ko', name: '한국어' },
+  { code: 'vi', name: 'Tiếng Việt' },
+  { code: 'th', name: 'ไทย' },
+  { code: 'id', name: 'Bahasa Indonesia' },
+  { code: 'ms', name: 'Bahasa Melayu' },
+  { code: 'hi', name: 'हिन्दी' },
+  { code: 'bn', name: 'বাংলা' },
+  { code: 'ta', name: 'தமிழ்' },
+  { code: 'te', name: 'తెలుగు' },
+  { code: 'ur', name: 'اردو' },
+  { code: 'ar', name: 'العربية' },
+  { code: 'he', name: 'עברית' },
+  { code: 'fa', name: 'فارسی' }
+];
+
